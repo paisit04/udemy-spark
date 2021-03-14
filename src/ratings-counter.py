@@ -3,6 +3,7 @@ import collections
 
 conf = SparkConf().setMaster("local").setAppName("RatingsHistogram")
 sc = SparkContext(conf = conf)
+sc.setLogLevel("ERROR")
 
 lines = sc.textFile("file:///opt/bitnami/spark/datasets/ml-100k/u.data")
 ratings = lines.map(lambda x: x.split()[2])
