@@ -9,6 +9,7 @@ https://sundog-education.com/spark-python/
 ## Running pyspark
 
 ```bash
+docker-compose up spark
 docker-compose exec spark bash
 pyspark
 ```
